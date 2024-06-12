@@ -5,11 +5,11 @@ import { UpdateUserDto } from "./dto/update.user.dto";
 import { AuthGuard } from "@nestjs/passport";
 
 @Controller('api/v1/users')
-@UseGuards(AuthGuard('jwt'))
 export class UsersController { 
     constructor(private readonly usersService: UsersService) {}
 
     @Get()
+    @UseGuards(AuthGuard('jwt'))
     async index() {
         return await this.usersService.findAll();
     }
@@ -20,16 +20,19 @@ export class UsersController {
     }
 
     @Get(':id')
+    @UseGuards(AuthGuard('jwt'))
     async show(@Param('id', new ParseUUIDPipe()) id: string) {
         return await this.usersService.findOneOrFail({ where:   { id } });
     }
 
     @Put(':id')
+    @UseGuards(AuthGuard('jwt'))
     async update(@Param('id', new ParseUUIDPipe()) id: string, @Body() body: UpdateUserDto) {
         return await this.usersService.update(id, body);
     }
 
     @Delete(':id')
+    @UseGuards(AuthGuard('jwt'))
     @HttpCode(HttpStatus.NO_CONTENT)
     async destroy(@Param('id', new ParseUUIDPipe()) id: string) {
         await this.usersService.destroy(id);
