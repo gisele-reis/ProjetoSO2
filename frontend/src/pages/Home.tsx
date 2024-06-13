@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {  useState } from 'react';
 import Card from "../components/Card";
 import SearchBar from "../components/SearchBar";
 import { useFoodData } from "../hooks/useFoodData";
@@ -7,7 +7,7 @@ const Home = () => {
     const { data } = useFoodData();
     const [search, setSearch] = useState('');
 
-    const handleSearchChange = (e : any) => {
+    const handleSearchChange = (e: any) => {
         setSearch(e.target.value);
     };
 
@@ -28,14 +28,15 @@ const Home = () => {
             <div className="flex-grow overflow-y-scroll mt-20 px-8 scrollbar">
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center place-content-center gap-y-10">
                     {filteredData?.map((item) => 
-                    <Card 
-                    key={item.id} 
-                    image={item.picture} 
-                    title={item.name} 
-                    description={item.description} 
-                    price={item.salePrice} 
-                    category={item.category}
-                    />
+                        <Card 
+                            key={item.id} 
+                            image={item.picture} 
+                            title={item.name} 
+                            description={item.description} 
+                            price={item.salePrice} 
+                            category={item.category}
+                            id={item.id}
+                        />
                     )}
                 </div>
             </div>
