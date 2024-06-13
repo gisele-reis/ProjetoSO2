@@ -3,7 +3,6 @@ import useAuth from '../hooks/useAuth';
 import IconeCadastro from '../assets/cadastro-item.svg';
 import HomeIcone from '../assets/home-icone.svg';
 import LogoutIcone from '../assets/logout-icone.svg';
-import SearchBar from './SearchBar';
 
 export default function Sidebar() {
     const { logout } = useAuth();
@@ -45,9 +44,6 @@ export default function Sidebar() {
                     </Link>   
                 );
               })}     
-          </div>
-          <div className='lg:hidden'>
-            <SearchBar />
           </div>
           <div className='flex items-center justify-end lg:justify-center'>
             <button onClick={handleLogout} className="flex py-2 px-2 mx-5 lg:m-0 lg:px-5 items-center justify-center gap-4 hover:bg-[#93D1BE] transition ease-in-out rounded-lg">
