@@ -25,7 +25,7 @@ const CadastroItem = () => {
     const handleSubmit = async (e:any) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/foods', {
+            const response = await fetch('http://54.85.240.162:3000/foods', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
