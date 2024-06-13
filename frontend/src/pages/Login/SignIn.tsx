@@ -27,7 +27,7 @@ const SignIn = () => {
             <div className="flex flex-col items-center justify-center gap-2">
                 <div className="flex items-center gap-3 ">
                     <img src="elmenu-logo.png" className="h-[130px] mb-[2px]" />
-                    <h1 className="text-7xl font-bold leading-tight tracking-tight text-[#47A789] self-end">El Menu</h1>
+                    <h1 className="text-7xl font-bold leading-tight tracking-normal text-[#47A789] self-end uppercase">El Menu</h1>
                 </div>
                 <div className="flex w-[450px] items-center justify-center px-6 py-8 bg-white rounded-xl shadow-lg border">
                     <form onSubmit={handleSubmit} className="flex flex-col w-full items-center justify-between gap-8 px-4">
