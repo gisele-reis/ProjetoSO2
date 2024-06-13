@@ -126,12 +126,12 @@ const CadastroItem = () => {
                         </div>
                     </div>
                 
-                    <div className="grid grid-cols-4 w-full gap-6 pr-8">
+                    <div className="grid lg:grid-cols-4 w-full gap-6 pr-8">
                         <div className="col-span-3 flex flex-col px-8 ">
                             <label className="mb-2 text-xl font-medium">Informações</label>
                             <textarea name="info" value={informations} onChange={(e) => setInformations(e.target.value)} className="bg-[#CED7D9] h-32 resize-none rounded focus:outline-[#47A789] p-2" />
                         </div>
-                        <div className="col-span-1 place-self-end">
+                        <div className="col-span-1 place-self-center lg:place-self-end">
                             <button type="submit" className="flex justify-center bg-[#47A789] font-bold py-2 px-6 rounded-2xl hover:bg-[#93D1BE] transition ease-in-out">Cadastrar</button>
                         </div>
 
